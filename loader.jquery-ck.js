@@ -1,0 +1,9 @@
+//
+//  loader.jquery.js
+//  Loader Plugin Version 1.0
+//	Loader Plugin for preloading images and background images
+//
+//  Created by Robbie Bardijn on 2012-05-22.
+//  Copyright 2012 Robbie Bardijn. All rights reserved.
+//
+(function(a){a.fn.preloadImage=function(b,c,d){d===undefined&&(d=function(){});c===undefined&&(c=function(){});if(b===undefined)throw"ERROR : The completeCallBack should be a function that will be called on loading complete";if(this.children().length===0){c(this);var e=this,f=new Image;f.addEventListener?f.addEventListener("load",function(){b(e);d(e)},!1):f.attachEvent&&f.attachEvent("onload",function(){b(e);d(e)});f.src=this[0].src}else{var g=this.find("img");c(g);var h=0;g.each(function(c){function i(){h+=1;b(e);g.length===h&&d(g)}var e=a(this),f=new Image;f.addEventListener?f.addEventListener("load",i,!1):f.attachEvent&&f.attachEvent("onload",i);f.src=e.context.src})}};a.fn.preloadBackgroundImage=function(b,c,d){d===undefined&&(d=function(){});c===undefined&&(c=function(){});if(b===undefined)throw"ERROR : The completeCallBack should be a function that will be called on loading complete";if(this.children().length===0){c(this);if(this.css("background-image")!=="none"){var e=this,f=new Image;f.addEventListener?f.addEventListener("load",function(){b(e);d(e)},!1):f.attachEvent&&f.attachEvent("onload",function(){b(e);d(e)});var g=this.css("background-image").replace(/(\"|\')/g,"");f.src=g.substring(4,g.length-1)}else{b(this);d(this)}}else{var h=this.find("*").filter(function(){var b;a(this).css("background-image")!=="none"?b=!0:b=!1;return b});c(h);var i=0;h.each(function(c){function g(){i+=1;b(e);h.length===i&&d(h)}var e=a(this),f=new Image;f.addEventListener?f.addEventListener("load",g,!1):f.attachEvent&&f.attachEvent("onload",g);var j=e.css("background-image").replace(/(\"|\')/g,"");f.src=j.substring(4,j.length-1)})}}})(jQuery);
