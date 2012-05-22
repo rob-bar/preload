@@ -22,7 +22,7 @@ $(group selector).preloadBackgroundImage(completeCallBack, startCallBack, endCal
 startCallBack & endCallBack are optional
 
 examples:
-http://preview.prox.to/jstests/preloading/
-http://preview.prox.to/jstests/preloading/index_all.php
-http://preview.prox.to/jstests/preloading/index_img.php
-http://preview.prox.to/jstests/preloading/index_bg.php
+http://preview.prox.to/jstests/preloading/ <br />
+http://preview.prox.to/jstests/preloading/index_all.php <br />
+http://preview.prox.to/jstests/preloading/index_img.php <br />
+http://preview.prox.to/jstests/preloading/index_bg.php <br />
