@@ -88,7 +88,7 @@
         if (this.children().length === 0) {
             startCallBack(this);
             if (this.css('background-image') !== "none") {
-                var sel = this;
+     						var sel = this;
                 var img = new Image();
                 if (img.addEventListener) {
                     // W3C DOM
@@ -106,8 +106,20 @@
                         endCallBack(sel);
                     });
                 }
-                var str = this.css('background-image').replace(/(\"|\')/g, "");
-                img.src = str.substring(4, str.length - 1);
+								
+								
+								
+								var str = this.css('background-image').replace(/(\"|\')/g, "");
+                
+								if(str.search(/(\,)/g)){
+									var images = str.split(',');
+									for(var i= 0; i < images.length ; i++){
+										img.src = str.substring(4, str.length - 1);
+									}
+							  }
+								
+								
+								
             } else {
                 completeCallBack(this);
                 endCallBack(this);
@@ -144,8 +156,13 @@
                     img.attachEvent("onload", imageloaded);
                 }
                 //stripping single and double quotes
-                var str = load.css('background-image').replace(/(\"|\')/g, "");
-                img.src = str.substring(4, str.length - 1);
+                var str = load.css('background-image').replace(/(\"|\'|\ )/g, "");
+								//array for multiple backgrounds
+								var images = str.split(',');
+								
+								for(var i= 0; i < images.length ; i++){
+			 						img.src = images[i].substring(4, images[i].length - 1);
+								}
 
             });
         }
