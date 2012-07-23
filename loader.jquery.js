@@ -106,16 +106,14 @@
                         endCallBack(sel);
                     });
                 }
-			
-				 //stripping single and double quotes + spaces
-                var str = load.css('background-image').replace(/(\"|\'|\ )/g, "");
-				//array for multiple backgrounds
-				var images = str.split(',');
+							//stripping single and double quotes + spaces
+						 	var str = load.css('background-image').replace(/(\"|\'|\ )/g, "");
+							//array for multiple backgrounds
+							var images = str.split(',');
 				
-				for(var i= 0; i < images.length ; i++){
-					img.src = images[i].substring(4, images[i].length - 1);
-				}
-
+							for(var i= 0; i < images.length ; i++){
+								img.src = images[i].substring(4, images[i].length - 1);
+							}
             } else {
                 completeCallBack(this);
                 endCallBack(this);
@@ -130,10 +128,10 @@
                 }
                 return retVal;
             });
+						
             startCallBack(found);
             var cntLoaded = 0;
             found.each(function(index) {
-
                 var load = $(this);
                 var img = new Image();
                 function imageloaded() {
@@ -151,15 +149,15 @@
                     // IE DOM
                     img.attachEvent("onload", imageloaded);
                 }
+								
                 //stripping single and double quotes + spaces
                 var str = load.css('background-image').replace(/(\"|\'|\ )/g, "");
-				//array for multiple backgrounds
-				var images = str.split(',');
-				
-				for(var i= 0; i < images.length ; i++){
-					img.src = images[i].substring(4, images[i].length - 1);
-				}
-
+								//array for multiple backgrounds
+								var images = str.split(',');
+								
+								for(var i= 0; i < images.length ; i++){
+									img.src = images[i].substring(4, images[i].length - 1);
+								}
             });
         }
     };
