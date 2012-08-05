@@ -1,0 +1,50 @@
+/* =========== */
+/* = General = */
+/* =========== */
+p,form,img,h1,h2,h3,h4,h5,h6,ul,ol,li,html,body,input,button,textarea {
+margin: 0;
+padding: 0;
+}
+.hide {
+left: -10000px;
+position: absolute;
+}
+a,input,textarea,button {
+outline: none;
+}
+a img {
+border: none;
+}
+html {
+height: 100%;
+}
+body {
+background-color: #000000;
+font-family: Arial,Helvetica,sans-serif;
+height: 100%;
+}
+h3{
+	margin:5px 5px;
+	color:#FFF;
+	font-family: Arial, "MS Trebuchet", sans-serif;
+}
+h4{
+	margin:15px 5px;
+	color:#FFF;
+	font-family: Arial, "MS Trebuchet", sans-serif;
+}
+p{
+	margin:10px 10px 0 10px;
+	color:#FFF;
+	font-family: Arial, "MS Trebuchet", sans-serif;
+}
+code{
+	margin:5px 10px;
+	color:#CCC;
+	font-family: Arial, "MS Trebuchet", sans-serif;
+}
+
+cufon {
+text-indent: 0!important;
+}
+

@@ -1,23 +1,22 @@
-preload
-=======
+# preload
+### Jquery Plugin for preloading images and background images
 
-Jquery Plugin for preloading images and background images
 
-	<section>
-		<h3>PRELOADING USAGE</h3>
-		<h4>Image tags</h4>
-		<p>preloading a single image tag:</p>
-		<code>$(selector).preloadImage(completeCallBack, startCallBack);</code>
-		<p>preloading a group of image tags:</p>
-		<code>$(group selector).preloadImage(completeCallBack, startCallBack, endCallBack);</code>
-		
-		<h4>Background images</h4>
-		<p>preloading a single tag:</p>
-		<code>$(selector).preloadBackgroundImage(completeCallBack, startCallBack);</code>
-		<p>preloading a group of tags:</p>
-		<code>$(group selector).preloadBackgroundImage(completeCallBack, startCallBack, endCallBack);</code>
-		<p>startCallBack &amp; endCallBack are optional</p>
-	</section>
+#### Description
+
+	This javascript file is usseful for preloading images & css background images 
+	It is a jquery plugin, so you need to load it up with jquery
+	Feel free to adapt, use or share this file.
+
+#### Usage
+
+**The plugin exists out of one function preload():**
+
+	
+
+
+
+
 
 examples:
 http://preview.prox.to/jstests/preloading/ <br />
