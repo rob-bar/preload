@@ -86,7 +86,7 @@
 			
 			//BACKGROUND IMAGE
 			if(kind === "background-image"){
-				if (this.css('background-image') !== "none") {
+				if (this.css('background-image') !== "none" && this.css('background-image').indexOf("url") !== -1) {
 					var sel = this;
 					var img = new Image();
 					if (img.addEventListener) {
@@ -137,7 +137,7 @@
 					}
 					img.src = this[0].src;	
 				}
-				if (this.css('background-image') !== "none") {
+				if (this.css('background-image') !== "none" && this.css('background-image').indexOf("url") !== -1) {
 					var sel = this;
 					var img = new Image();
 					if (img.addEventListener) {
@@ -200,7 +200,7 @@
 			if(kind === "background-image"){
 				var found = this.find("*").filter(function() {
 					var retVal;
-					if ($(this).css('background-image') !== "none") {
+					if ($(this).css('background-image') !== "none" && $(this).css('background-image').indexOf("url") !== -1) {
 						retVal = true;
 					} else {
 						retVal = false;
@@ -242,7 +242,7 @@
 				var foundimg = this.find('img');
 				var foundbgimg = this.find("*").filter(function() {
 					var retVal;
-					if ($(this).css('background-image') !== "none") {
+					if ($(this).css('background-image') !== "none" && $(this).css('background-image').indexOf("url") !== -1) {
 						retVal = true;
 					} else {
 						retVal = false;
